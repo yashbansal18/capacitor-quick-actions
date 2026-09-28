@@ -1,0 +1,120 @@
+{
+  "api": {
+    "name": "QuickActionsPlugin",
+    "slug": "quickactionsplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "addQuickActions",
+        "signature": "(options: { actions: QuickAction[]; }) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ actions: QuickAction[]; }"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "QuickAction"
+        ],
+        "slug": "addquickactions"
+      },
+      {
+        "name": "clearQuickActions",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "clearquickactions"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: 'quickActionSelected', listenerFunc: (data: { type: string; }) => void) => PluginListenerHandle",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "'quickActionSelected'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "(data: { type: string; }) => void"
+          }
+        ],
+        "returns": "PluginListenerHandle",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle"
+        ],
+        "slug": "addlistenerquickactionselected-"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "QuickAction",
+      "slug": "quickaction",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "id",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "title",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "iconName",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        }
+      ]
+    },
+    {
+      "name": "PluginListenerHandle",
+      "slug": "pluginlistenerhandle",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "remove",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "() => Promise<void>"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}
